@@ -8,6 +8,13 @@
 \maketitle
 \newpage
 \section{Introduction}
+\subsection{EEG}
+\begin{enumerate}
+    \item Gel based device
+    \item dry device
+    \item uncomfortable to wear 
+    \item 
+\end{enumerate}
 \subsection{Neurofeedback}
 \subsection{Meditation}
 Over the last decades, meditation has gained the interest of popular culture and the scientific community.
@@ -21,9 +28,17 @@ Since the beneficial effects of meditation are so various, the potential goals o
 that provides neurofeedback to its user are inherently diverse. Machine assisted meditation could help individuals to 
 improve faster, track their progresssion, analyze the state of mind and lower the entrance barrier for novel practicioners. \cite{brand:del} \
 
+The differences in EEG signals induced by the different meditation practices enable a categorization
+and dedicated training regime to offer the device and software solution to a wider audience. \cite{Travis}
 \section{Measurement Data}
 \subsection{Biological Signals}
 \subsection{Measuring}
+\subsection{Challenges}
+Involuntary movement of the tongue, eyeballs, jaw and facial muscles produce noise in the milivolt range, while brain signals are on 
+the order of mikrovolt. These artifacts do not only occur in consumer great EEG devices, but also in medical grade.
+These artifacts need to be filtered out to produce a reliable signal for further analysis \cite{Bashivan: et al}.
+
+The time window of measurement is also crucial for the accuracy of machine learning models.
 \subsection{Processing and evaluation}
 \section{Available Devices}
 \subsection{Neurosky - Mindwave Mobile 2}
@@ -39,5 +54,9 @@ improve faster, track their progresssion, analyze the state of mind and lower th
     Frontiers in Psychology, Article 688 (October 2013).
     \bibitem[Tang1]{Tang:et al}
     Tang, Yi-Yuan, Britta K. Hölzel, and Michael I. Posner. "The neuroscience of mindfulness meditation." Nature Reviews Neuroscience 16.4 (2015): 213-225.
-    \end{thebibliography}
+    \bibitem[BPI]{Bashivan: et al}
+    Bashivan, Pouya, Irina Rish, and Steve Heisig. "Mental state recognition via wearable EEG." arXiv preprint arXiv:1602.00985 (2016).    
+    \bibitem[TFJ1]{Travis} 
+    Travis, Fred, and Jonathan Shear. "Focused attention, open monitoring and automatic self-transcending: categories to organize meditations from Vedic, Buddhist and Chinese traditions." Consciousness and cognition 19.4 (2010): 1110-1118.
+\end{thebibliography}
 \end{document}
