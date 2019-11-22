@@ -9,6 +9,25 @@
 \newpage
 \section{Introduction}
 \subsection{EEG}
+EEG stands for electroencephalography and is a process to record the electrical activity in the brain. The measured signal are voltage changes in and between neurons.
+[] The brains signal is in the order of mikrovolt. For measurement, EEG electrodes are placed on the test subjects scalp. In Research, up to 256 electrodes are used, while consumer grade devices use around 10\% of this. The electrical signal is measured as frequencies. These get passed to a Fast Fourier Transformation (FTT) to produce distinct waves, which are then categorized according to known patterns.
+Brain waves of individuals can be compared to aggravated data of many test subjects, to search for disorders or match for meditation success, access to enough datapoints assumed.
+There are four main brain frequencies:
+
+\begin{itemize}
+    \item 
+    Beta Waves (frequency range from 14 Hz to about 30 Hz)
+    \item 
+    Alpha Waves (frequency range from 7 Hz to 13 Hz)
+    \item 
+    Theta Waves (frequency range from 4 Hz to 7 Hz)
+    \item 
+    Delta Waves (frequency range up to 4 Hz)
+\end{itemize}
+From the data, conclusions about attention, stress, cognitive load and more are possible.
+While EEG caps are usually used in research and academia, headsets provide a reasonable solution for consumers with less complexity, but also lower precision.
+For the accuracy of the measurement it is still crucial, that the sensors are correctly affixed, so that they measure the brain regions that are involved in meditation.
+
 \begin{enumerate}
     \item Gel based device
     \item dry device
@@ -16,13 +35,25 @@
     \item 
 \end{enumerate}
 \subsection{Neurofeedback}
+What is neurofeedback?
+
+How can it be used for the users advantage??
 \subsection{Meditation}
 Over the last decades, meditation has gained the interest of popular culture and the scientific community.
-Documented beneficial effects range from mood improvements to structural changes in various regions of the brain. \cite{Tang:et al}
+Documented beneficial effects range from mood improvements to structural changes in various regions of the brain, such as the amygdala (responsible for stress and anxiety), anterior cingulate cortex, brain stem (breathing)
+and the default mode network. \cite{Tang:et al}
+Therefore, meditation has become part of psychiatric interventions \cite{Hoelzel}, high performance sports and personal development.
+% QUOTE
+Historically, meditation stems from buddhist practices and has been part of eastern culture for centuries, though variations were also practiced by the ancient greeks.[]
+
 Though there is not one single meditation practice, the methods are plentiful. While often associated with stillness and watching ones breath,
-there are also more active forms of meditation that involve more movement. In this paper, we will not deal with specifics of and differences between concrete
-practices, but rather look at a general version of meditation and the mutual interaction with wearable neurofeedback devices.
+there are also more active forms of meditation that involve more movement. Travis and Shear categorize meditation practices into focused attention, open monitoring and automatic self-transcending.[] 
+Since this categorization is based on different EEG patterns and would be part of the wearable device, I will follow this categorization and differentiate where appropriate.
+
+All these potential benefits lead to an increasing populace that wants to learn and practice meditation, so that a device that helps in the acquisition of this skill becomes desirable. 
+The demands, functions, challenges and applications for such a device are the topic of this work.
 \subsection{Awareness}
+Mindfulness and awareness are two terms often mentioned in the context of meditation and there is no exact, agreed upon scientific definition to separate these two.
 \section{Goals}
 Since the beneficial effects of meditation are so various, the potential goals of using a wearable device 
 that provides neurofeedback to its user are inherently diverse. Machine assisted meditation could help individuals to 
@@ -32,6 +63,26 @@ The differences in EEG signals induced by the different meditation practices ena
 and dedicated training regime to offer the device and software solution to a wider audience. \cite{Travis}
 \section{Measurement Data}
 \subsection{Biological Signals}
+\begin{itemize}
+    \item EEG
+    \item brain blood flow infrared spectroscopy
+\end{itemize}
+Combination of NIRS and EEG would be optimal! There is no such device yet for consumers though.
+Possible?
+Brain wave explanation
+
+
+
+Beta Waves (frequency range from 14 Hz to about 30 Hz)
+
+
+Alpha Waves (frequency range from 7 Hz to 13 Hz)
+
+
+Theta Waves (frequency range from 4 Hz to 7 Hz)
+
+
+Delta Waves (frequency range up to 4 Hz)
 \subsection{Measuring}
 \subsection{Challenges}
 Involuntary movement of the tongue, eyeballs, jaw and facial muscles produce noise in the milivolt range, while brain signals are on 
@@ -48,15 +99,17 @@ The time window of measurement is also crucial for the accuracy of machine learn
 
 
 \begin{thebibliography}{[MT1]}
-    \bibitem[BD1]{brand:del}
+    \bibitem[1]{brand:del}
     Tracy Brandmeyer, Arnaud Delorme,
     Meditation and neurofeedback
     Frontiers in Psychology, Article 688 (October 2013).
-    \bibitem[Tang1]{Tang:et al}
+    \bibitem[2]{Tang:et al}
     Tang, Yi-Yuan, Britta K. Hölzel, and Michael I. Posner. "The neuroscience of mindfulness meditation." Nature Reviews Neuroscience 16.4 (2015): 213-225.
-    \bibitem[BPI]{Bashivan: et al}
+    \bibitem[3]{Bashivan: et al}
     Bashivan, Pouya, Irina Rish, and Steve Heisig. "Mental state recognition via wearable EEG." arXiv preprint arXiv:1602.00985 (2016).    
-    \bibitem[TFJ1]{Travis} 
+    \bibitem[4]{Travis} 
     Travis, Fred, and Jonathan Shear. "Focused attention, open monitoring and automatic self-transcending: categories to organize meditations from Vedic, Buddhist and Chinese traditions." Consciousness and cognition 19.4 (2010): 1110-1118.
+    \bibitem[5]{Hoelzel}
+    How Does Mindfulness Meditation Work? Proposing Mechanisms of Action From a Conceptual and Neural Perspective
 \end{thebibliography}
 \end{document}
