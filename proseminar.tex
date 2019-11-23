@@ -10,10 +10,12 @@
 \section{Introduction}
 \subsection{EEG}
 EEG stands for electroencephalography and is a process to record the electrical activity in the brain. The measured signal are voltage changes in and between neurons.
-[] The brains signal is in the order of mikrovolt. For measurement, EEG electrodes are placed on the test subjects scalp. In Research, up to 256 electrodes are used, while consumer grade devices use around 10\% of this. The electrical signal is measured as frequencies. These get passed to a Fast Fourier Transformation (FTT) to produce distinct waves, which are then categorized according to known patterns.
+The brains signal is in the order of mikrovolt \cite{Berger}.  For measurement, EEG electrodes are placed on the test subjects scalp. In Research, up to 256 electrodes are used \cite{Seeck}, while consumer grade devices use around 10\% of this. \cite{Maskeliunas}
+The electrical signal is measured as frequencies. These get passed to a Fast Fourier Transformation (FTT) or wavelet transformation \cite{Akin} to produce distinct waves, which are then categorized according to known patterns \cite{Shaker}.
 Brain waves of individuals can be compared to aggravated data of many test subjects, to search for disorders or match for meditation success, access to enough datapoints assumed.
 There are four main brain frequencies:
 
+% quantitative eeg 
 \begin{itemize}
     \item 
     Beta Waves (frequency range from 14 Hz to about 30 Hz)
@@ -24,8 +26,8 @@ There are four main brain frequencies:
     \item 
     Delta Waves (frequency range up to 4 Hz)
 \end{itemize}
-From the data, conclusions about attention, stress, cognitive load and more are possible.
-While EEG caps are usually used in research and academia, headsets provide a reasonable solution for consumers with less complexity, but also lower precision.
+From the data, conclusions about attention \cite{Berka}, stress \cite{Hosseini}, cognitive load \cite{Antonenko} and more are possible.
+While EEG caps are usually used in research and academia \cite{Seeck}, headsets provide a reasonable solution for consumers with less complexity, but also lower precision\cite{Maskeliunas}.
 For the accuracy of the measurement it is still crucial, that the sensors are correctly affixed, so that they measure the brain regions that are involved in meditation.
 
 \begin{enumerate}
@@ -91,6 +93,7 @@ These artifacts need to be filtered out to produce a reliable signal for further
 
 The time window of measurement is also crucial for the accuracy of machine learning models.
 \subsection{Processing and evaluation}
+\cite{Lotte}
 \section{Available Devices}
 \subsection{Neurosky - Mindwave Mobile 2}
 \subsection{InteraXon Inc. - Muse 2}
@@ -99,17 +102,43 @@ The time window of measurement is also crucial for the accuracy of machine learn
 
 
 \begin{thebibliography}{[MT1]}
-    \bibitem[1]{brand:del}
+    \bibitem{brand:del}
     Tracy Brandmeyer, Arnaud Delorme,
     Meditation and neurofeedback
     Frontiers in Psychology, Article 688 (October 2013).
-    \bibitem[2]{Tang:et al}
+    \bibitem{Tang:et al}
     Tang, Yi-Yuan, Britta K. Hölzel, and Michael I. Posner. "The neuroscience of mindfulness meditation." Nature Reviews Neuroscience 16.4 (2015): 213-225.
-    \bibitem[3]{Bashivan: et al}
+    \bibitem{Bashivan: et al}
     Bashivan, Pouya, Irina Rish, and Steve Heisig. "Mental state recognition via wearable EEG." arXiv preprint arXiv:1602.00985 (2016).    
-    \bibitem[4]{Travis} 
+    \bibitem{Travis} 
     Travis, Fred, and Jonathan Shear. "Focused attention, open monitoring and automatic self-transcending: categories to organize meditations from Vedic, Buddhist and Chinese traditions." Consciousness and cognition 19.4 (2010): 1110-1118.
-    \bibitem[5]{Hoelzel}
-    How Does Mindfulness Meditation Work? Proposing Mechanisms of Action From a Conceptual and Neural Perspective
+    \bibitem{Hoelzel}
+    Hölzel, Britta K., et al. "How does mindfulness meditation work? Proposing mechanisms of action from a conceptual and neural perspective." Perspectives on psychological science 6.6 (2011): 537-559.
+    \bibitem{Cahn}
+    Cahn, B. Rael, and John Polich. "Meditation states and traits: EEG, ERP, and neuroimaging studies." Psychological bulletin 132.2 (2006): 180.
+    \bibitem{Braboszcz}
+    Braboszcz, Claire, and Arnaud Delorme. "Lost in thoughts: neural markers of low alertness during mind wandering." Neuroimage 54.4 (2011): 3040-3047.
+    \bibitem{Zoefel} 
+    Zoefel, Benedikt, René J. Huster, and Christoph S. Herrmann. "Neurofeedback training of the upper alpha frequency band in EEG improves cognitive performance." Neuroimage 54.2 (2011): 1427-1431.
+    \bibitem{Berger}
+    Berger, Hans. "Über das elektrenkephalogramm des menschen." European archives of psychiatry and clinical neuroscience 87.1 (1929): 527-570.
+    \bibitem{Seeck}
+    Seeck, Margitta, et al. "The standardized EEG electrode array of the IFCN." Clinical Neurophysiology 128.10 (2017): 2070-2077.
+    \bibitem{Maskeliunas}
+    Maskeliunas, Rytis, et al. "Consumer-grade EEG devices: are they usable for control tasks?." PeerJ 4 (2016): e1746.
+    \bibitem{Surangsrirat}
+    Surangsrirat, Decho, and Apichart Intarapanich. "Analysis of the meditation brainwave from consumer EEG device." SoutheastCon 2015. IEEE, 2015.
+    \bibitem{Akin}
+    Akin, Mehmet. "Comparison of wavelet transform and FFT methods in the analysis of EEG signals." Journal of medical systems 26.3 (2002): 241-247.
+    \bibitem{Shaker}
+    Shaker, Maan M. "EEG waves classifier using wavelet transform and Fourier transform." brain 2 (2006): 3.
+    \bibitem{Lotte}
+    Lotte, Fabien, et al. "A review of classification algorithms for EEG-based brain–computer interfaces." Journal of neural engineering 4.2 (2007): R1.
+    \bibitem{Antonenko}
+    Antonenko, Pavlo, et al. "Using electroencephalography to measure cognitive load." Educational Psychology Review 22.4 (2010): 425-438.
+    \bibitem{Berka}
+    Berka, Chris, et al. "Real-time analysis of EEG indexes of alertness, cognition, and memory acquired with a wireless EEG headset." International Journal of Human-Computer Interaction 17.2 (2004): 151-170.
+    \bibitem{Hosseini}
+    Hosseini, Seyyed Abed, and Mohammad Ali Khalilzadeh. "Emotional stress recognition system using EEG and psychophysiological signals: Using new labelling process of EEG signals in emotional stress state." 2010 international conference on biomedical engineering and computer science. IEEE, 2010.
 \end{thebibliography}
 \end{document}
