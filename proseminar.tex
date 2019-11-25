@@ -8,13 +8,13 @@
 \maketitle
 \newpage
 \section{Introduction}
+Meditation beneficial, popular, wearables cheaper and widespread adaptation. Inquring possibilty and state of the art of current devices for EEG meditation neurofeedback.
 \subsection{EEG}
 EEG stands for electroencephalography and is a process to record the electrical activity in the brain. The measured signal are voltage changes in and between neurons.
 The brains signal is in the order of mikrovolt \cite{Berger}.  For measurement, EEG electrodes are placed on the test subjects scalp. In Research, up to 256 electrodes are used \cite{Seeck}, while consumer grade devices use around 10\% of this. \cite{Maskeliunas}
 The electrical signal is measured as frequencies. These get passed to a Fast Fourier Transformation (FTT) or wavelet transformation \cite{Akin} to produce distinct waves, which are then categorized according to known patterns \cite{Shaker}.
-Brain waves of individuals can be compared to aggravated data of many test subjects, to search for disorders or match for meditation success, access to enough datapoints assumed.
-There are four main brain frequencies:
-
+Brain waves of individuals can be compared to aggravated data of many test subjects, to search for disorders \cite{Loo} or match for meditation success \cite{Tang:et al}, access to enough datapoints assumed.
+There are four main brain frequencies \cite{Cahn}:
 % quantitative eeg 
 \begin{itemize}
     \item 
@@ -28,28 +28,27 @@ There are four main brain frequencies:
 \end{itemize}
 From the data, conclusions about attention \cite{Berka}, stress \cite{Hosseini}, cognitive load \cite{Antonenko} and more are possible.
 While EEG caps are usually used in research and academia \cite{Seeck}, headsets provide a reasonable solution for consumers with less complexity, but also lower precision\cite{Maskeliunas}.
-For the accuracy of the measurement it is still crucial, that the sensors are correctly affixed, so that they measure the brain regions that are involved in meditation.
+For the accuracy of the measurement it is still crucial, that the sensors are correctly affixed \cite{Seeck}, so that they measure the brain regions that are involved in meditation.
 
-\begin{enumerate}
-    \item Gel based device
-    \item dry device
-    \item uncomfortable to wear 
-    \item 
-\end{enumerate}
+EEG devices are either gel based or dry. In Research, gel electrodes are used and cost thousands of dollars, have wired signal transmission and are time consuming to setup and are uncomfortable to wear.
+Consumer devices on the other hand are dry, wireless and cost only a few hundreds of dollars. \cite{Decho}
 \subsection{Neurofeedback}
 What is neurofeedback?
+
+"Electroencephalography feedback has been used to aid training and study medita- tion by providing the practitioners with information on the brain waves they are producing"
+\cite{Tang:et al}
 
 How can it be used for the users advantage??
 \subsection{Meditation}
 Over the last decades, meditation has gained the interest of popular culture and the scientific community.
-Documented beneficial effects range from mood improvements to structural changes in various regions of the brain, such as the amygdala (responsible for stress and anxiety), anterior cingulate cortex, brain stem (breathing)
-and the default mode network. \cite{Tang:et al}
+Documented beneficial effects range from mood improvements to structural changes \cite{Davidson} in various regions of the brain, such as the amygdala (responsible for stress and anxiety), anterior cingulate cortex, brain stem (breathing)
+and the default mode network \cite{Tang:et al}.
 Therefore, meditation has become part of psychiatric interventions \cite{Hoelzel}, high performance sports and personal development.
 % QUOTE
 Historically, meditation stems from buddhist practices and has been part of eastern culture for centuries, though variations were also practiced by the ancient greeks.[]
 
 Though there is not one single meditation practice, the methods are plentiful. While often associated with stillness and watching ones breath,
-there are also more active forms of meditation that involve more movement. Travis and Shear categorize meditation practices into focused attention, open monitoring and automatic self-transcending.[] 
+there are also more active forms of meditation that involve more movement. Travis and Shear categorize meditation practices into focused attention, open monitoring and automatic self-transcending.\cite{Travis} 
 Since this categorization is based on different EEG patterns and would be part of the wearable device, I will follow this categorization and differentiate where appropriate.
 
 All these potential benefits lead to an increasing populace that wants to learn and practice meditation, so that a device that helps in the acquisition of this skill becomes desirable. 
@@ -140,5 +139,11 @@ The time window of measurement is also crucial for the accuracy of machine learn
     Berka, Chris, et al. "Real-time analysis of EEG indexes of alertness, cognition, and memory acquired with a wireless EEG headset." International Journal of Human-Computer Interaction 17.2 (2004): 151-170.
     \bibitem{Hosseini}
     Hosseini, Seyyed Abed, and Mohammad Ali Khalilzadeh. "Emotional stress recognition system using EEG and psychophysiological signals: Using new labelling process of EEG signals in emotional stress state." 2010 international conference on biomedical engineering and computer science. IEEE, 2010.
+    \bibitem{Loo}
+    Loo SK, Barkley RA. Clinical utility of EEG in attention deficit hyperactivity disorder. Appl Neuropsychol 2005; 12(2): 64-76.
+    \bibitem{Davidson}
+    Buddha’s Brain: Neuroplasticity and Meditation
+    \bibitem{Decho}
+    Analysis of the Meditation Brainwave from    Consumer EEG Device
 \end{thebibliography}
 \end{document}
