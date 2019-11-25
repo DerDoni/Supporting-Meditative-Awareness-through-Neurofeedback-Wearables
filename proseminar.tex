@@ -16,19 +16,19 @@ In the end, three popular EEG headsets will be compared and evaluated.
 \subsection{EEG}
 EEG stands for electroencephalography and is a process to record the electrical activity in the brain. The measured signal are voltage changes in and between neurons.
 The brains signal is in the order of mikrovolt \cite{Berger}.  For measurement, EEG electrodes are placed on the test subjects scalp. In Research, up to 256 electrodes are used \cite{Seeck}, while consumer grade devices use around 10\% of this. \cite{Maskeliunas}
-The electrical signal is measured as frequencies. These get passed to a Fast Fourier Transformation (FTT) or wavelet transformation \cite{Akin} to produce distinct waves, which are then categorized according to known patterns \cite{Shaker}.
+The electrical signal is measured as frequencies and go through an EEG ampflifier. These get passed to a Fast Fourier Transformation (FTT) or wavelet transformation \cite{Akin} to produce distinct waves, which are then categorized according to known patterns \cite{Shaker}.
 Brain waves of individuals can be compared to aggravated data of many test subjects, to search for disorders \cite{Loo} or match for meditation success \cite{Tang:et al}, access to enough datapoints assumed.
 There are four main brain frequencies \cite{Cahn}:
 % quantitative eeg 
 \begin{itemize}
     \item 
-    Beta Waves (frequency range from 14 Hz to about 30 Hz)
+    Beta Waves (frequency range from 14 Hz to about 30 Hz), associated with intellectual activity and outwardly focused concentration
     \item 
-    Alpha Waves (frequency range from 7 Hz to 13 Hz)
+    Alpha Waves (frequency range from 7 Hz to 13 Hz), associated with relaxation
     \item 
-    Theta Waves (frequency range from 4 Hz to 7 Hz)
+    Theta Waves (frequency range from 4 Hz to 7 Hz), associated with mental inefficiency \cite{Hammond}, zone between wake and sleep
     \item 
-    Delta Waves (frequency range up to 4 Hz)
+    Delta Waves (frequency range up to 4 Hz), associated with sleeping, learning disabilities \cite{Hammond}
 \end{itemize}
 From the data, conclusions about attention \cite{Berka}, stress \cite{Hosseini}, cognitive load \cite{Antonenko} and more are possible.
 While EEG caps are usually used in research and academia \cite{Seeck}, headsets provide a reasonable solution for consumers with less complexity, but also lower precision\cite{Maskeliunas}.
@@ -37,12 +37,14 @@ For the accuracy of the measurement it is still crucial, that the sensors are co
 EEG devices are either gel based or dry. In Research, gel electrodes are used and cost thousands of dollars, have wired signal transmission and are time consuming to setup and are uncomfortable to wear.
 Consumer devices on the other hand are dry, wireless and cost only a few hundreds of dollars. \cite{Decho}
 \subsection{Neurofeedback}
-What is neurofeedback?
+Neurofeedback (NFB), also called EEG biofeedback, is a therapy that was invented as a method for training brainwave patterns through operant conditioning and is known since the 1960s \cite{Hammond}. %OK like that?
+It is used not only as a treatment of disorders, but also in peak performance training.
+Operant conditioning is the learning process where a behavior is modified by punishment or reward, the famous example being Pavlov's dog \cite{Spence}. NFB never uses punishment though. In NFB, the neural activity is recorded and presented to the participant in real time.  
+Usually people are not aware of their brain waves, so seeing them on a screen helps gives you the ability to influence them. This is the operant conditioning part. In the beginning, the changes are only short-lived, but with practice can become lasting. 
+NFB is non-invasive and is sometimes used as an alternative to medication \cite{Hammond}. Another unique kind of NFB is called LENS, where a tiny electromagnetic signal is introduced to the electrodes and transported to the brain.
+However, it is not recommended to use NFB equipment without any expertise. Also, the training should be individualised to the unique brainwave patterns of each person. A physician should always be consulted first.
+Otherwise, negative side effects or degradation of existing disorders are possible. Only healthy individuals should use a NFB device for meditation training on their own risk.
 
-"Electroencephalography feedback has been used to aid training and study medita- tion by providing the practitioners with information on the brain waves they are producing"
-\cite{Tang:et al}
-
-How can it be used for the users advantage??
 \subsection{Meditation}
 Over the last decades, meditation has gained the interest of popular culture and the scientific community.
 Documented beneficial effects range from mood improvements to structural changes \cite{Davidson} in various regions of the brain, such as the amygdala (responsible for stress and anxiety), anterior cingulate cortex, brain stem (breathing)
@@ -74,25 +76,13 @@ and dedicated training regime to offer the device and software solution to a wid
 \end{itemize}
 Combination of NIRS and EEG would be optimal! There is no such device yet for consumers though.
 Possible?
-Brain wave explanation
 
-
-
-Beta Waves (frequency range from 14 Hz to about 30 Hz)
-
-
-Alpha Waves (frequency range from 7 Hz to 13 Hz)
-
-
-Theta Waves (frequency range from 4 Hz to 7 Hz)
-
-
-Delta Waves (frequency range up to 4 Hz)
 \subsection{Measuring}
 \subsection{Challenges}
+Such a QEEG Assesment usually takes about 1.5 hours, which is too long for a consumer.
 Involuntary movement of the tongue, eyeballs, jaw and facial muscles produce noise in the milivolt range, while brain signals are on 
 the order of mikrovolt. These artifacts do not only occur in consumer great EEG devices, but also in medical grade.
-These artifacts need to be filtered out to produce a reliable signal for further analysis \cite{Bashivan: et al}.
+These artifacts need to be filtered out to produce a reliable signal for further analysis \cite{Bashivan: et al}, which will be extremely difficult, since the device would need to know when a person moved ever so slightly \cite{Hammond}.
 
 The time window of measurement is also crucial for the accuracy of machine learning models.
 \subsection{Processing and evaluation}
@@ -155,8 +145,15 @@ The time window of measurement is also crucial for the accuracy of machine learn
     Patel, Mitesh S., David A. Asch, and Kevin G. Volpp. "Wearable devices as facilitators, not drivers, of health behavior change." Jama 313.5 (2015): 459-460.
     \bibitem{ucsd}
     \url{https://sccn.ucsd.edu/~arno/fam2data/publicly_available_EEG_data.html}
-
-
-
+    \bibitem{Seo}
+    Seo, Ssang-Hee, and Jung-Tae Lee. "Stress and EEG." Convergence and hybrid information technologies. IntechOpen, 2010.
+    \bibitem{Hammond}
+    Hammond, D. Corydon. "What is neurofeedback?." Journal of neurotherapy 10.4 (2007): 25-36.
+    \bibitem{Sulzer}
+    Sulzer, James, et al. "Real-time fMRI neurofeedback: progress and challenges." Neuroimage 76 (2013): 386-399.
+    \bibitem{Spence}
+    Spence, Kenneth Wartenbee. Behavior theory and conditioning. Vol. 35. New Haven: yale university Press, 1956.
+    \bibitem{Sitaram}
+    Sitaram, Ranganatha, et al. "Closed-loop brain training: the science of neurofeedback." Nature Reviews Neuroscience 18.2 (2017): 86.
 \end{thebibliography}
 \end{document}
