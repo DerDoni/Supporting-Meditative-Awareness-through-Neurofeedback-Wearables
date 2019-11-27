@@ -1,6 +1,11 @@
 \documentclass{llncs} %
 \bibliographystyle{splncs}
 \usepackage{url}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\newcommand{\source}[1]{\hfill Source: {#1} }
+
 \begin{document}
 
 \title{Supporting Meditative Awareness through Neurofeedback Wearables}
@@ -14,7 +19,7 @@ Consumer EEG devices and freely available EEG/ERP databases \cite{ucsd} offer a 
 This work presents the current state of art of consumer EEG devices, the signals involved in meditation and the possibility for usage of such devices for meditation training.
 In the end, three popular EEG headsets will be compared and evaluated.
 \subsection{EEG}
-EEG stands for electroencephalography and is a process to record the electrical activity in the brain. The measured signal are voltage changes in and between neurons.
+EEG stands for electroencephalography and is a process to record the electrical activity in the brain. The measured signal are voltage changes in and between neurons. EEG can only measure measure signal in the outer regions of the brain \cite{Sitaram}.
 The brains signal is in the order of mikrovolt \cite{Berger}.  For measurement, EEG electrodes are placed on the test subjects scalp. In Research, up to 256 electrodes are used \cite{Seeck}, while consumer grade devices use around 10\% of this. \cite{Maskeliunas}
 The electrical signal is measured as frequencies and go through an EEG ampflifier. These get passed to a Fast Fourier Transformation (FTT) or wavelet transformation \cite{Akin} to produce distinct waves, which are then categorized according to known patterns \cite{Shaker}.
 Brain waves of individuals can be compared to aggravated data of many test subjects, to search for disorders \cite{Loo} or match for meditation success \cite{Tang:et al}, access to enough datapoints assumed.
@@ -38,9 +43,16 @@ EEG devices are either gel based or dry. In Research, gel electrodes are used an
 Consumer devices on the other hand are dry, wireless and cost only a few hundreds of dollars. \cite{Decho}
 \subsection{Neurofeedback}
 Neurofeedback (NFB), also called EEG biofeedback, is a therapy that was invented as a method for training brainwave patterns through operant conditioning and is known since the 1960s \cite{Hammond}. %OK like that?
-It is used not only as a treatment of disorders, but also in peak performance training.
+It is used not only as a treatment of disorders, but also in peak performance training. NFB experiments led to the deleopment of the field of brain-machine interfaces \cite{Sitaram}.
 Operant conditioning is the learning process where a behavior is modified by punishment or reward, the famous example being Pavlov's dog \cite{Spence}. NFB never uses punishment though. In NFB, the neural activity is recorded and presented to the participant in real time.  
-Usually people are not aware of their brain waves, so seeing them on a screen helps gives you the ability to influence them. This is the operant conditioning part. In the beginning, the changes are only short-lived, but with practice can become lasting. 
+Usually people are not aware of their brain waves, so seeing them on a screen helps by giving you the ability to influence them. This is the operant conditioning part. In the beginning, the changes are only short-lived, but with practice can become lasting. 
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{Neurofeedback.png}
+    \caption{The neurofeedback process}  \label{neurofeedback}
+    \source{Sitaram et al, 2016}
+\end{figure}
+
 NFB is non-invasive and is sometimes used as an alternative to medication \cite{Hammond}. Another unique kind of NFB is called LENS, where a tiny electromagnetic signal is introduced to the electrodes and transported to the brain.
 However, it is not recommended to use NFB equipment without any expertise. Also, the training should be individualised to the unique brainwave patterns of each person. A physician should always be consulted first.
 Otherwise, negative side effects or degradation of existing disorders are possible. Only healthy individuals should use a NFB device for meditation training on their own risk.
@@ -87,6 +99,7 @@ These artifacts need to be filtered out to produce a reliable signal for further
 The time window of measurement is also crucial for the accuracy of machine learning models.
 \subsection{Processing and evaluation}
 \cite{Lotte}
+\section{Training procedure}
 \section{Available Devices}
 \subsection{Neurosky - Mindwave Mobile 2}
 \subsection{InteraXon Inc. - Muse 2}
