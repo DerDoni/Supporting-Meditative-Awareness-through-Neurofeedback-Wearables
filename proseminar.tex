@@ -42,7 +42,7 @@ EEG devices are either gel based or dry. In Research, gel electrodes are used an
 Consumer devices on the other hand are dry, wireless and cost only a few hundreds of dollars. \cite{Decho}
 \subsection{Neurofeedback}
 Neurofeedback (NFB), also called EEG biofeedback, is a therapy that was invented as a method for training brainwave patterns through operant conditioning and is known since the 1960s \cite{Hammond}. %OK like that?
-It is used not only as a treatment of disorders \cite{brand:del}, but also in peak performance training. NFB experiments led to the deleopment of the field of brain-machine interfaces \cite{Sitaram}.
+It is used not only as a treatment of disorders \cite{brand:del}, but also in peak performance training \cite{Kaufman}. NFB experiments led to the deleopment of the field of brain-machine interfaces \cite{Sitaram}.
 Operant conditioning is the learning process where a behavior is modified by punishment or reward \cite{Spence}. NFB never uses punishment though. In NFB, the neural activity is recorded and presented to the participant in real time, either auditory or visual.  
 Usually people are not aware of their brain waves, so seeing them on a screen helps by giving you the ability to influence them. This is the operant conditioning part. In the beginning, the changes are only short-lived, but with practice can become lasting. 
 
@@ -67,14 +67,14 @@ Though there is not one single meditation practice, the methods are plentiful. W
 there are also more active forms of meditation that involve more movement. Travis and Shear categorize meditation practices into focused attention, open monitoring and automatic self-transcending.\cite{Travis} 
 Since this categorization is based on different EEG patterns and would be part of the wearable device, I will follow this categorization and differentiate where appropriate.
 \subsection{Awareness}
-Mindfulness and awareness are two terms often mentioned in the context of meditation and there is no exact, agreed upon scientific definition to separate these two.
+Mindfulness and awareness are two terms often mentioned in the context of meditation and there is no exact, agreed upon scientific definition to separate these two. Merriam Webster lists the two terms as synonimous and defines awareness as: "knowledge and understanding that something is happening or exists" \cite{Merriam:Webster}. 
 
-In current research contexts, mindfulness is typically defined as nonjudgmental attention to experiences in the present moment (Kabat-Zinn, 1990).
+In current research contexts, mindfulness is typically defined as nonjudgmental attention to experiences in the present moment \cite{Kabat-Zinn}.
 \section{Goals}
-Since the beneficial effects of meditation are so various, the potential goals of using a wearable device 
+Since the beneficial effects of meditation are so various, the goals of using a wearable device 
 that provides neurofeedback to its user are inherently diverse. Machine assisted meditation could help individuals to 
 improve faster, track their progresssion, analyze the state of mind and lower the entrance barrier for novel practicioners. \cite{brand:del}
-
+All of these different features can be combined in an app targeted at consumers. 
 The differences in EEG signals induced by the different meditation practices enable a categorization
 and dedicated training regime to offer the device and software solution to a wider audience. \cite{Travis}
 \section{Measurement Data}
@@ -93,7 +93,13 @@ Possible?
 
 EEG band meditation.
 
+
+
+\textbf{Welche (gehirn-)signale sind biologisch relevant für meditation? --> welche signale kann ich messen (insbesondere auch welche signale sind für low cost geräte geeignet: hardwarekosten, messdauer, ... )?}
+
+
 \subsection{Measuring}
+\textbf{welche signale bekomme ich, warum kann ich die mit so einem "billigen" gerät schon messen? wie funktioniert das?...}
 \subsection{Challenges}
 Such a QEEG Assesment usually takes about 1.5 hours, which is too long for a consumer.
 Involuntary movement of the tongue, eyeballs, jaw and facial muscles produce noise in the milivolt range, while brain signals are on 
@@ -124,11 +130,20 @@ It was common for inexperienced users to wear the device too low on the forehead
 What is much less clear is whether and how meditation practices produce increased alpha beyond that obtained from reducing gen- eral arousal, which may become apparent only when fine-grained topographic mapping is combined with other neuroimaging meth- ods \cite{Cahn}
 
 \subsection{Processing and evaluation}
+\textbf{wie werden diese Signale vom gerät (hardware, software) erkannt und verarbeitet? --> wie können diese Signale für den Softwareentwickler in Anwendungen umgesetzt werden?}
+
+
+
 In real-time analysis, the signal that is extracted from these methods is typically transformed into the frequency domain and decomposed into a specific frequency (for example, delta (0–4 Hz), theta (4–7 Hz), alpha (8–12 Hz), beta (12–30 Hz) and gamma (>30 Hz) bands) before feature extraction. Examples of feature extraction include coherence, power spectral density and their combinations for input to multivariate patterns, event-related potentials and slow cortical potentials. The signals can be processed either in sensor space (that is, individual electrodes) or source space (for example, beam formers164 or LORETA165) that enables a more accurate estimate of the activity in cortical regions that then is transformed into the feedback signal16 \cite{Sitaram}.
 
-\textbf{Feature extraction}
+\textbf{Feature extraction} Independent Component Analysis, Discrete Wavelet Transform 
+
+Preprocessing, Signal Denoising (Wavelet), FTT
 
 We find our classification approach is able to distinguish between the baseline and meditation state on a second-by- second basis with a mean balanced success rate of 75.7\% \cite{Dixit}
+
+EEG power spectrum analysis
+
 
 
 \cite{Lotte}
@@ -140,14 +155,22 @@ Learning to control brain activity in humans is determined by contingent feedbac
 Assuming that reliable and repro- ducible EEG signatures are associated with specific meditation practices, we may expect that training subjects to reproduce these signatures would support and strengthen their meditation practice.
 Clinical neurofeedback protocols are aim- ing toward comparing patients’ EEG with large EEG data sets from normal sub- jects in order to produce a neurofeed- back algorithm which rewards subjects (patients) whose EEG becomes closer to that of the normal population (Thornton and Carmody, 2009) \cite{brand:del}
 \section{Available Devices}
+In the following sections, three consumer EEG headsets will be compared. The studies used as a basis of my analysis are a few years old. In a such a fast moving field, the information might already be outdated. While one device was best a few years ago, it might not even be sold today. Thus, I try to present more general features of devices in a certain price category. While I focus on consumer grade EEG headsets, I will also look into one research grade device. What is professional performance now, will likely be achievable in consumer electronics in a few years. Thus, this can be seen as an outlook of what might be used by software engineers soon.
 \subsection{Neurosky - Mindwave Mobile 2}
 \subsection{InteraXon Inc. - Muse 2}
-\subsection{Emotiv - Epoc+}
+\subsection{Emotiv - Insight 5}
+EMOTIV is an award-winning San Francisco based BCI company founded in 2011. They target researchers, companies and consumers with their products. Several independent papers using their products have been published. They offer an App and multiple EEG headsets. The EMOTIV Insight 5 EEG headset is their consumer device with a price of 300\$. With their software, they provide detection of facial expressions, which are important in noise detection, and mental metrics such as stress and focus. The EEG sensor uses five channels, two references above the ears and is made of a semi-dry polymer that needs to be moistened before usage. The nine axis motion sensors detect head movements. \cite{Emotiv1}
+
+
+\subsection{Emotiv - EPOC+}
+The EPOC internally samples at a frequency of 2048 Hz, which then gets down-sampled to 128 Hz sampling frequency per channel, and sends the data to a computer via Bluetooth. It utilizes a proprietary USB dongle to communicate using the 2.4 GHz band. Prior to use, all felt pads on top of the sensors have to be moistened with a saline solution \cite{Kushaba}
+The Emotiv EPOC is a high resolution, neuro-signal acquisition and processing wireless headset that monitors 14 channels of EEG data and has a gyroscope measure for 2 dimensional control
+
 \section{The optimal device}
 However, we believe that with the development of novel approaches, such as thin tattoo-type elec- trodes, EEG recording will become practical in a much wider spectrum of real-life scenarios, and that recognizing mental states using wearables devices will become much more widespread \cite{Bashivan: et al}
 \section{Conclusion}
 
-
+\newpage
 \begin{thebibliography}{[MT1]}
     \bibitem{brand:del}
     Tracy Brandmeyer, Arnaud Delorme,
@@ -211,8 +234,15 @@ However, we believe that with the development of novel approaches, such as thin 
     Sitaram, Ranganatha, et al. "Closed-loop brain training: the science of neurofeedback." Nature Reviews Neuroscience 18.2 (2017): 86.
     \bibitem{Dixit}
     Dixit, Rohan. "Meditation training and neurofeedback using a personal EEG device." 2012 AAAI Spring Symposium Series. 2012.
-
-
-
+    \bibitem{Kushaba}
+    Khushaba, Rami N., et al. "Consumer neuroscience: Assessing the brain response to marketing stimuli using electroencephalogram (EEG) and eye tracking." Expert Systems with Applications 40.9 (2013): 3803-3812.
+    \bibitem{Merriam:Webster}
+    https://www.merriam-webster.com/dictionary/awareness
+    \bibitem{Kabat-Zinn}
+    Kabat-Zinn, Jon, and Thich Nhat Hanh. Full catastrophe living: Using the wisdom of your body and mind to face stress, pain, and illness. Delta, 2009.
+    \bibitem{Kaufman}
+    Kaufman, Keith A., Carol R. Glass, and Diane B. Arnkoff. "Evaluation of Mindful Sport Performance Enhancement (MSPE): A new approach to promote flow in athletes." Journal of Clinical Sport Psychology 3.4 (2009): 334-356.
+    \bibitem{Emotiv1}
+    \url{https://www.emotiv.com/insight/}
 \end{thebibliography}
 \end{document}
